@@ -5,7 +5,7 @@ Electron based cross-platform unofficial Fizy Music player.
 
 ## Github Project Stats
 
-[![ISSUES](https://img.shields.io/github/issues/Eta06/fizyelectron)](https://github.com/Eta06/XNotepad/blob/main/LICENSE.md) [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/Eta06/fizyelectron/blob/main/LICENSE.md)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/Eta06/fizyelectron/blob/main/LICENSE.md)
 
 
 
