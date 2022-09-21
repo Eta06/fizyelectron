@@ -1,0 +1,42 @@
+{
+  "name": "fizyelectron",
+  "version": "1.0.0",
+  "description": "Electron based cross-platform unofficial Fizy Music player.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eta06/fizyelectron.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "electron-trace": "electron --trace-warnings .",
+    "buildwin": "electron-packager --out dist/ --overwrite --platform win32 --appname FizyElectron . --icon icon.ico",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "FizyElectron.Eta06",
+    "win":{
+      "target": ["nsis"],
+      "icon": "./icon.ico"
+    },
+    "nsis":{
+      "installerIcon": "./icon.ico",
+      "uninstallerIcon": "./icon.ico",
+      "uninstallDisplayName": "Fizy Electron",
+      "oneClick": "false",
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [
+    "Fizy",
+    "Electron"
+  ],
+  "author": "Eta06",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eta06/fizyelectron/issues"
+  },
+  "devDependencies": {
+    "electron": "^20.1.4"
+  }
+}
