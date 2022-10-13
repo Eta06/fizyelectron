@@ -22,11 +22,11 @@ jobs:
 
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-          paths:
+          paths: 
             - ./node_modules
       - run:
           name: Generate Builds
           command: npm start
-          
+
       - store_artifacts:
           path: ~/repo/out/make
