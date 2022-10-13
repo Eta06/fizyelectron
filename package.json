@@ -1,5 +1,4 @@
 {
-  
   "name": "fizyelectron",
   "version": "1.0.0",
   "description": "Electron based cross-platform unofficial Fizy Music player.",
@@ -40,5 +39,4 @@
   "devDependencies": {
     "electron": "^20.1.4"
   }
-  
 }
