@@ -9,7 +9,7 @@ jobs:
     steps:
       - node/install-packages
       - run: sudo apt-get update
-      - run: sudo apt-get install libnss3
+      - run: sudo apt-get install -y libgconf-2-4 xvfb gcc-multilib g++-multilib icnsutils graphicsmagick xz-utils libudev-dev libnss3 libgtk-3-0
       
 workflows:
   example-workflow:
