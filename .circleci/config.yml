@@ -1,19 +1,32 @@
 version: 2.1
-setup: false
 jobs:
-  node-test:
+  build:
+    working_directory: ~/repo
     docker:
-      - image: cimg/node:lts
-    resource_class: medium
+      - image: circleci/node:11
     steps:
-      - checkout: {}
+      - checkout
       - run:
+          name: Update NPM
+          command: "sudo npm install -g npm"
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install Dependencies
           command: npm install
-          name: NPM Install
       - run:
+          name: Install dpkg and fakeroot
+          command: |
+            sudo apt-get update -y
+            sudo apt-get install -y dpkg fakeroot
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Generate Builds
           command: npm start
-          name: Run app
-workflows:
-  myWorkflow:
-    jobs:
-      - node-test: {}
+
+      - store_artifacts:
+          path: ~/repo/out/make
