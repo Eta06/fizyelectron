@@ -1,0 +1,19 @@
+version: 2.1
+setup: false
+jobs:
+  node-test:
+    docker:
+      - image: cimg/node:lts
+    resource_class: medium
+    steps:
+      - checkout: {}
+      - run:
+          command: npm install
+          name: NPM Install
+      - run:
+          command: npm start
+          name: Run app
+workflows:
+  myWorkflow:
+    jobs:
+      - node-test: {}
