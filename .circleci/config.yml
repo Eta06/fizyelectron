@@ -13,4 +13,4 @@ workflows:
     jobs:
       - example-job
       - node/run:
-            npm-run: start
+            npm-run: buildwin
