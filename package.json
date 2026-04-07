@@ -37,6 +37,6 @@
     "url": "https://github.com/Eta06/fizyelectron/issues"
   },
   "devDependencies": {
-    "electron": "^28.3.2"
+    "electron": "^39.8.5"
   }
 }
